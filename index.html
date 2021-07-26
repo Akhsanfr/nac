@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> National Accounting Competition</title>
+    <title>NAC</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
@@ -25,7 +25,7 @@
           <div class="bg-gradient-to-r from-yellow-700 to-yellow-500 rounded-2xl relative transform -rotate-3 shadow">
             <div class="rounded-2xl class bg-gray-800 rounded p-3 transform rotate-3 text-gray-50 shadow">
               <span class="bg-gradient-to-r from-yellow-700 to-yellow-500font-bold">National Accounting Challenge (NAC) 2021</span> 
-              adalah kegiatan yang diadakan oleh BEM PKN STAN berupa kompetisi nasional di bidang akuntansi yang diikuti oleh mahasiswa jurusan Akuntansi dari berbagai perguruan tinggi di seluruh Indonesia. Pada tahun ini, National Accounting Challenge (NAC) akan dilaksanakan penuh secara daring untuk adaptasi dalam situasi dan kondisi di tengah pandemi. National Accounting Challenge (NAC) 2021 akan dikombinasikan dengan kegiatan Seminar Nasional dengan narasumber ahli yang akan membahas topik menarik di bidang Akuntansi. Seminar ini akan dilaksanakan secara d yang akan dibagi dalam beberapa sesi.
+              adalah kegiatan yang diadakan oleh BEM PKN STAN berupa kompetisi  nasional di bidang akuntansi yang diikuti oleh mahasiswa jurusan Akuntansi dari berbagai  perguruan tinggi di seluruh Indonesia. Pada tahun ini, National Accounting Challenge (NAC) akan dilaksanakan penuh secara daring untuk adaptasi dalam situasi dan kondisi di tengah pandemi. National Accounting Challenge (NAC) 2021 akan dikombinasikan dengan kegiatan Seminar Nasional dengan narasumber ahli yang akan membahas topik menarik di bidang Akuntansi. Seminar ini akan dilaksanakan secara daring yang akan dibagi dalam beberapa sesi.
             </div>
           </div>
         </div>
@@ -36,125 +36,71 @@
         </div>
       </div>
 
-      <!-- Posisi -->
+      <!-- Kebutuhan Panitia -->
       <div class="text-center"><h2 class="font-bold text-gray-50 text-3xl">Kebutuhan Panitia</h2></div>
-      <div class="flex flex-col"
-        x-data="{posisi :[
-            { 
-              id: 1,
-              nama:'Staf Acara Lomba',
-              show:false,
-              tugas:'Membuat konsep, tema, dan melaksanakan teknis serangkaian kegiatan lomba.',
-              formasi: 5,
-              fungsi: [
-                'Menyusun konsep perlombaan',
-                'Menyusun rangkaian kegiatan selama perlombaan,',
-                'Menyusun peraturan dan ketentuan lomba.'
-              ],
-            },
-            { 
-              id: 2,
-              nama:'Staf Acara Seminar',
-              show:false,
-              tugas:'Menyusun konsep, tema, menentukan pembicara serta melaksanakan teknis rangkaian kegiatan seminar.',
-              formasi: 4,
-              fungsi: [
-                'Menentukan tema,',
-                'Menyusun konsep seminar,',
-                'Menentukan narasumber,',
-                'Menyusun rangkaian kegiatan seminar.'
-              ],
-            },
-            { 
-              id: 3,
-              nama:'Staf Media Partner',
-              show:false,
-              tugas:'Berkoordinasi dengan pihak ketiga berupa media partner sebagai sarana publikasi acara.',
-              formasi: 2,
-              fungsi: [
-                'Mencari media publikasi acara,',
-                'Berkoordinasi serta berkomunikasi dengan pihak bersangkutan.'
-              ],
-            },
-            { 
-              id: 5,
-              nama:'Staf Registrasi',
-              show:false,
-              tugas:'Membuat konsep dan sistem registrasi peserta dalam rangkaian acara baik lomba maupun seminar',
-              formasi: 2,
-              fungsi: [
-                'Membuat sistem registrasi yang efektif dan efisien,',
-                'Melaksanakan proses registrasi lomba dan seminar.'
-              ],
-            },
-            { 
-              id: 6,
-              nama:'Staf Liaison Officer (LO)',
-              show:false,
-              tugas:'Menghubungkan panitia dengan pihak ketiga yang berhubungan dengan acara.',
-              formasi: 2,
-              fungsi: [
-                'Berkoordinasi dengan pihak ketiga berupa narasumber, juri, dan pihak eksternal lain yang berhubungan dengan acara.'
-              ],
-            },
-            { 
-              id: 7,
-              nama:'Staf Publikasi, Design, dan Dokumentasi (PDD)',
-              show:false,
-              tugas:'Menyusun design untuk publikasi acara di media sosial serta mendokumentasikan rangkaian acara.',
-              formasi: 5,
-              fungsi: [
-                'Melaksanakan dokumentasi pada serangkaian acara',
-                'Melaksanakan publikasi',
-                'Membuat desain yang diperlukan selama acara.'
-              ],
-            },
-            { 
-              id: 8,
-              nama:'Staf Media Streamer',
-              show:false,
-              tugas:'Bertanggung jawab atas room yang digunakan selama rangkaian kegiatan serta publikasi ke media sosial.',
-              formasi: 2,
-              fungsi: [
-                'Menjadi operator room saat pelaksana acara,',
-                'Melakukan streaming jika diperlukan.'
-              ],
-            }
-          ]}">
-        <template x-for="data in posisi" :key="data.id">
-          <div 
-          class="border border-yellow-700 rounded-lg shadow-lg hover:shadow-xl bg-gray-800 cursor-pointer mt-3"
-          @click=" data.show = !data.show"
-          @click.outside=" data.show = false"
-          >
-            <div class="m-3 flex flxe-row justify-between items-center">
-              <h3 class="text-gray-50 font-bold text-xl md:text-lg" x-text="data.nama"></h3>
-              <div>
-                <img 
-                src="arrow.png" alt="arrow" 
-                class="h-4 transform transition" 
-                :class="data.show ? 'rotate-90' : 'rotate-0' ">
+      <div class="flex flex-col space-y-6"
+        x-data="panitia">
+      <!-- for bidang -->
+        <template x-for="bidang in panitia">
+          <div class=" shadow rounded-2xl bg-gradient-to-r from-red-900 to-red-700 p-3">
+            <!-- Nama Bidang -->
+
+            <h3 x-text="bidang.nama" class="text-2xl font-medium text-gray-50"></h3>
+
+            <!-- for Staf Bidang -->
+            <template x-for="staf in bidang.staf" :key="staf.id">
+              <div 
+              class="border border-yellow-700 rounded-lg shadow-lg hover:shadow-xl bg-gray-800 cursor-pointer mt-3"
+              @click=" staf.show = !staf.show"
+              @click.outside=" staf.show = false"
+              >
+                <div class="m-3 flex flxe-row justify-between items-center">
+                  <h3 class="text-gray-50 font-bold text-xl md:text-lg" x-text="staf.nama"></h3>
+                  <div>
+                    <img 
+                    src="arrow.png" alt="arrow" 
+                    class="h-4 transform transition" 
+                    :class="staf.show ? 'rotate-90' : 'rotate-0' ">
+                  </div>
+                </div>
+                <div x-show="staf.show" 
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 transform -translate-y-10"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 transform translate-y-0"
+                x-transition:leave-end="opacity-0 transform -translate-y-10"
+                class="p-3 text-gray-50">
+                  <ol>
+                    <li><span x-text="staf.tugas" class="bg-gradient-to-r from-yellow-700 to-yellow-500 font-bold"></span></li>
+                    <li>Formasi       : <span x-text="staf.formasi"></span> orang</li>
+                    <li>Tugas         : </li>
+                    <template x-for="fungsi in staf.fungsi">
+                      <li> - <span x-text="fungsi"></span></li>
+                    </template>
+                    
+                    <template x-if="staf.nama == 'Staf Web Developer'">
+                      <div>
+                        <li>
+                          Kebutuhan   : UI/UX Designer, Frontend Web Developer, dan Backend Web Developer
+                        </li>
+                        <li>
+                          Kualifikasi UI/UX Designer  : Minimal menguasai desain grafis
+                        </li>
+                      </div>
+                    </template>
+                  </ol>
+                </div>
               </div>
-            </div>
-            <div x-show="data.show" 
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 transform -translate-y-10"
-            x-transition:enter-end="opacity-100 transform translate-y-0"
-            x-transition:leave="transition ease-in duration-300"
-            x-transition:leave-start="opacity-100 transform translate-y-0"
-            x-transition:leave-end="opacity-0 transform -translate-y-10"
-            class="p-3 text-gray-50">
-              <ol>
-                <li><span x-text="data.tugas" class="bg-gradient-to-r from-yellow-700 to-yellow-500 font-bold"></span></li>
-                <li>Formasi : <span x-text="data.formasi"></span> orang</li>
-                <li>Tugas : </li>
-                <template x-for="fungsi in data.fungsi">
-                  <li> - <span x-text="fungsi"></span></li>
-                </template>
-              </ol>
-            </div>
+            </template>
+
           </div>
         </template>
+
+        
+
+
+
       </div>
       <!-- End of Posisi -->
 
@@ -165,11 +111,11 @@
           </div>
         </div>
         <div class="w-full lg:w-1/2 text-2xl text-gray-50">
-          <div>
-            Bergabunglah dengan kami dan dapatkan <span class="bg-gradient-to-r from-yellow-700 to-yellow-500">SKPM-mu!</span> (Buat kata-kata ajakan)
+          <div class="text-center">
+            "Jangan lewatkan kesempatan untuk menjadi bagian dari <span class="bg-gradient-to-r from-yellow-700 to-yellow-500">NAC 2021</span> !" 
           </div>
           <div class="flex justify-center mt-10">
-            <a href="http://staner.id/agnimandala3" class="py-2 px-3 rounded-full shadow-lg hover:shadow-xl bg-gradient-to-r from-yellow-700 to-yellow-500"> Daftar </a>
+            <a href="http://staner.id/agnimandala3" class="py-2 px-3 rounded-full shadow-lg hover:shadow-xl bg-gradient-to-r from-yellow-700 to-yellow-500"> Daftar sekarang </a>
           </div>
         </div>
       </div>
@@ -195,6 +141,7 @@
       </div>
     </footer>
       <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+      <script src="data-panitia.js"></script>
     <script>
       new TypeIt("#judul", {
         speed: 75,
@@ -209,8 +156,11 @@
       .move(-8)
       .type('c', {delay:50})
       .move(9)
-      .type(' Competition.')
+      .type(' Challenge.')
       .go();
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('panitia', () => (panitia))
+      })
       </script>
   </body>
 </html>
