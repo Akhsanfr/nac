@@ -97,7 +97,7 @@ panitia = {panitia :[
       staf : [
         { 
           id: 1,
-          nama:'Staf Publikasi, Design, dan Dokumentasi (PDD)',
+          nama:'Staf Design, dan Dokumentasi',
           show:false,
           tugas:'Menyusun design untuk publikasi acara di media sosial serta mendokumentasikan rangkaian acara.',
           formasi: 8,
