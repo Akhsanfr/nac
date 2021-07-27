@@ -15,7 +15,7 @@ data = {
       nama : 'DIVISI ACARA',
       kabid : 'Anastasya Utami',
       wa : '082271101221',
-      link : 'wa.me/+6282271101221',
+      link : 'https://wa.me/+6282271101221',
       staf : [
         { 
           id: 1,
@@ -61,7 +61,7 @@ data = {
       nama : 'DIVISI REGISTRASI DAN LIAISON OFFICER (RLO)',
       kabid : 'Shasza Yemima Puteri Atmodjo',
       wa : '0811323636',
-      link : 'wa.me/+62811323636',
+      link : 'https://wa.me/+62811323636',
       staf : [
         { 
           id: 1,
@@ -113,7 +113,7 @@ data = {
       nama : 'DIVISI PUBLIKASI, DESAIN, DAN DOKUMENTASI',
       kabid : 'Ikhsan Hadi Ardiansyah',
       wa : '081332462153',
-      link : 'wa.me/+6281332462153',
+      link : 'https://wa.me/+6281332462153',
       staf : [
         { 
           id: 1,
