@@ -10,12 +10,12 @@
   </head>
   <body x-data="data">
 
-    <header class="bg-gradient-to-r from-red-900 to-red-700 flex flex-row items-center p-3 space-x-3">
+    <header class="bg-gradient-to-r from-red-900 to-red-700 flex flex-col md:flex-row justify-center items-center p-3 space-x-3 space-y-3">
 
       <a href="#" class="mr-auto"><img src="logo/nac.png" alt="logo" class="h-10"></a>
       <template x-for="link in links">
         <span>
-          <a :href="link.href" x-text="link.nama" class="text-gray-50 hover:text-gray-900 hover:bg-yellow-500 p-3 transition rounded font-medium">Pengumuman Kabid</a>
+          <a :href="link.href" x-text="link.nama" class="text-gray-50 md:hover:text-gray-900 md:hover:bg-yellow-500 p-3 transition rounded font-medium underline md:no-underline">Pengumuman Kabid</a>
         </span>
       </template>
     </header>
@@ -53,7 +53,7 @@
 
       <!-- Timeline -->
 
-      <div class="flex flex-col items-center bg-gradient-to-r from-yellow-700 to-yellow-500 -mx-24 text-gray-50 py-10">
+      <div class="flex flex-col items-center bg-gradient-to-r from-yellow-700 to-yellow-500 -mx-10 md:-mx-24 text-gray-50 py-10">
         <h2 class="text-3xl font-bold mb-10">Timeline</h2>
         <div class="flex flex-col md:flex-row">
 
@@ -167,8 +167,8 @@
         </div>
 
         <!-- WA CP with sticky class -->
-        <div class="sticky bottom-20 self-end -mr-16">
-          <a href="wa.me/6282337470677"><image src="logo/whatsapp.png" class="h-10"></a>
+        <div class="sticky bottom-20 self-end -mr-8 md:-mr-16">
+          <a href="wa.me/6282337470677"><image src="logo/whatsapp.png" class="h-6 md:h-10"></a>
         </div>
 
       </div>
