@@ -157,7 +157,7 @@ data = {
     {
       id: 1,
       nama : 'Pendaftaran Staf',
-      tgl : '26 Juli - 1 Agustus'
+      tgl : '26 Juli - 31 Juli'
     },
     {
       id: 2,
